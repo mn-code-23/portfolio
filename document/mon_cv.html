@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Mon CV en ligne</title>
+    <style>
+        :root{
+            --ecriture: #333;
+            --background-color: white;
+            --header: #f5f5f5;
+            --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            --colorh: #2c3e50;
+            --colord: #7f8c8d;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--ecriture);
+            background-color: var(--background-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header{
+            text-align: center;
+            background-color: var(--header);
+            border-radius: 8px;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        .changeTheme{
+            margin-left: auto;
+            width: 100px;
+        }
+        header h1{
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--colorh);
+        }
+        header .contact{
+            margin: 20px 0px;
+        }
+
+        .section{
+            border-radius: 8px;
+            background-color: var(--background-color);
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section h2{
+            color: var(--colorh);
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+       
+        .competences{
+           display: flex;
+           flex-wrap: wrap; /* Aller a la ligne quand la ligne complete */
+           gap: 10px; /* Espacer les elements de 10px de gauche a droite*/
+        }
+        .competences span{
+            background-color: #3498db;
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .formation, .experience , .projet_univ{
+            margin-bottom: 20px;
+        }
+        .projet_univ{
+            margin-bottom: 30px;
+        }
+        h3{
+            color: #3498db;
+        }
+        .date{
+            color: var(--colord);
+            font-style: italic;
+        }
+        li{
+            list-style: circle;
+        }
+
+        @media (max-width : 764px){
+            body{
+                padding: 10px;
+            }
+            header{
+                padding: 20px 0;
+            }
+            header h1{
+                font-size: 2rem;
+            }
+            .section{
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="changeTheme"><i class="bi bi-moon-stars-fill"></i> /<i class="bi bi-sun-fill"></i></div>
+        <h1>Mouhamadou Niang</h1>
+        <p>Technicien en Systèmes Réseaux et Télécommunications <br>
+            Développeur Web Junior
+        </p>
+        <div class="contact">
+            <p>📧 mncode2023@gmail.com</p>
+            <p>📱 +221 76 778 87 61</p>
+            <p>📍 Thies, Senegal</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Profil</h2>
+        <p>
+            Diplomé de l’Université Alioune Diop de Bambey, en Licence Systèmes Réseaux et Télécommunications, passionné par lestechnologies de l'information et de la communication.
+            Fort d'une solide formation théorique et pratique, je possède descompétences en développement web et en administration de réseaux. Mon expérience en tant que tuteur en informatique 
+            chez mJangale et divers projets personnels en développement web m'ont permis de développer des compétences pédagogiques et techniques.
+        </p>
+    </section>
+    
+    <section class="section">
+        <h2>Compétences</h2>
+        <div class="competences">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+            <span>Django</span>
+            <span>Python</span>
+            <span>Java</span>
+            <span>MySQL</span>
+            <span>administration réseau</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Formations</h2>
+        <div class="formation">
+            <h3>Licence en Systèmes, Réseaux et Télécommunications</h3>
+            <p class="date">Université Alioune Diop de Bambey (2020 - 2023)</p>
+            <p>Mention : Assez bien</p>
+            <p class="desc">
+                📍 Principaux modules : Réseaux, Télécommunications, Systèmes d'information. <br>
+                📍 Compétences acquises : Administration réseau, Développement d'application, gestion des Systèmes.
+            </p>
+        </div>
+        <div class="formation">
+            <h3>Baccalauréat Science Expérimentale (S2)</h3>
+            <p class="date">Lycée Djignabo Basséne de Ziguinchor (2019 - 2020)</p>
+            <p>Mention : Passable</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Expériences Professionnelles</h2>
+        <div class="experience">
+            <h3>Tuteur en Informatique</h3>
+            <p class="date">Mjangale, Dakar, Sénégal | Juillet 2024</p>
+            <p class="desc">
+                📍 Formation de Jeune sur MIT App Inventor et les bases de la programmation. <br>
+                📍 Organisation et conduite d'un hackathon pour les élèves. <br>
+                📍 Compétences acquises : Développement de compétences pédagogiques et gestion de groupe.
+            </p>
+        </div>
+        <div class="experience">
+            <h3>Projets Universitaire</h3>
+            <div class="projet_univ">
+                <p class="date">Projet de Fin d'études | Juillet 2024</p>
+                <p class="desc">
+                    📍 Sujet de mémoire : Plateforme web sécurisée d’achat en ligne de tickets pour la restauration universitaire avec système de gestion des consommations par codes QR. <br>
+                    📍 Equipe : Réalisé en binôme avec Abdoulaye Diagne Mbaye <br>
+                    📍 Note obtenue : 18/20 <br>
+                    📍 Description : Développement d'une solution numérique pour améliorer la gestion des services de restauration universitaire en intégrant une plateforme d’achat de tickets en ligne et un système
+                    de gestion par codes QR. Le projet a pour objectif de réduire les files d'attente, de faciliter la gestion des consommations, et de sécuriser les transactions. <br>
+                    📍 Technologies utilisées : Django, HTML, CSS, Bootstrap, JavaScript, Raspberry Pi, PayTech, SQLite3 <br>
+                    📍 Présentation : Projet présenté devant un jury universitaire à l'Université Alioune Diop de Bambey en Juillet 2024. <br>
+                    📍 Compétences acquises : Développement d'applicaion web responsive, robuste et sécurisée, gestion de projet, travaille d'équipe.
+                </p>
+            </div>
+            <div class="projet_univ">
+                <p class="date">Application de gestion des étudiants en JAVA (2023)</p>
+                <p class="desc">
+                    📍 Sujet de mémoire : Réalisation d'une interace de suivi des anciennes promotions de la licence SRT de l’Université Alioune Diop de Bambey. <br>
+                    📍 Equipe : Réalisé en binôme avec Abdoulaye Diagne Mbaye. <br>
+                    📍 Description : Développement d'une application de gestion des étudiants avec Java et MySQL, permettant de rester en contact avec ses diplomés de licence et de collecter des informations sur leur parcours professionnel. <br>
+                    📍 Technologies utilisées : Java, MySQL et Eclipse. <br>
+                    📍 Présentation : Projet présenté devant notre professeur de Java Avancée. <br>
+                    📍 Compétences acquises : Maitrise de la programmation orienté objet en Java, gestion de projet, travaille d'équipe.
+                </p>
+            </div>
+            <div class="projet_univ">
+                <p class="date">Mise en place d'un réseau local sous linux et Cisco (2022)</p>
+                <p class="desc">
+                    📍 Equipe : Réalisé en équipe. <br>
+                    📍 Description : Mise en place d'un serveur DHCP, DNS, WEB et d'un système de messagerie sous Linux et Cisco <br>
+                    📍 Présentation : Projet présenté devant notre professeur de réseau. <br>
+                    📍 Compétences acquises : Administration réseau, gestion de projet, travaille d'équipe.
+                </p>
+            </div> 
+        </div>
+        <div class="experience">
+            <h3>Projet personnel</h3>
+            <p class="date">Développement d'un site e-commerce 2024</p>
+            <p class="desc">
+                📍 Conception et développement d'un site web de e-commerce avec Django et Bootstrap. <br>
+                📍 Implémentation des fonctionnalités de gestion de panier et recherche. <br>
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Langues</h2>
+        <p>Français - Niveau Avancée</p>
+        <p>Anglais - Niveau Intermédiare</p>
+        <p>Wolof - Langue maternelle</p>
+    </section>
+
+    <script>
+        const switchThemeBtn = document.querySelector('.changeTheme')
+        let toggleTheme = 0;
+
+        switchThemeBtn.addEventListener('click', () => {
+
+            if (toggleTheme === 0) {
+                document.documentElement.style.setProperty('--ecriture', '#333');
+                document.documentElement.style.setProperty('--background-color', 'white');
+                document.documentElement.style.setProperty('--box-shadow', '0 2px 5px rgba(0,0,0,0.1)');
+                document.documentElement.style.setProperty('--header', '#f5f5f5');
+                document.documentElement.style.setProperty('--colorh', '#2c3e50');
+                document.documentElement.style.setProperty('--colord', '#7f8c8d');
+
+                toggleTheme++;
+            }
+            else{
+                document.documentElement.style.setProperty('--ecriture', 'white');
+                document.documentElement.style.setProperty('--background-color', '#333');
+                document.documentElement.style.setProperty('--box-shadow', '0 2px 5px rgba(255,255,255,0.1)');
+                document.documentElement.style.setProperty('--header', '#5d5d5d');
+                document.documentElement.style.setProperty('--colorh', '#6c97c2');
+                document.documentElement.style.setProperty('--colord', '#9fb2b3');
+                toggleTheme--;
+            }
+
+        })
+
+    </script>
+</body>
+</html>
